@@ -13,7 +13,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        PLACEHOLDER
+        Calorie Cruncher
+        <br/>
+        <br/>
         <PeopleContainer/>
       </div>
     )

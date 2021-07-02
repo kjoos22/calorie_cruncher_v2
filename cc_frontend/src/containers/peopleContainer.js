@@ -13,7 +13,7 @@ class PeopleContainer extends React.Component {
     render() {
         return (
             <div>
-                <PersonCreate/>
+                <PersonCreate/><br/>
                 <PeopleList people={this.props.people}/>
             </div>
         )
