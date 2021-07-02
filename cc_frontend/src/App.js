@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import PeopleContainer from './containers/peopleContainer'
+import PeopleContainer from './containers/PeopleContainer'
 
 class App extends React.Component {
   

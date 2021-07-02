@@ -1,7 +1,11 @@
 export function fetchPeople() {
-    // fetch("http://localhost:3001/people/1/days")
-    // .then(response => response.json())
-    // .then(response => console.log(response))
-
+    return (dispatch) => {
+        fetch("http://localhost:3001/people/")
+        .then(response => response.json())
+        .then(response => dispatch({
+            type: "FETCH_PEOPLE",
+            payload: response
+        }))
+    }
 
 }
