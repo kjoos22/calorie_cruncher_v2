@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {fetchPeople} from './actions/fetchPeople'
+import PeopleContainer from './containers/peopleContainer'
 
 class App extends React.Component {
   
@@ -14,6 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         PLACEHOLDER
+        <PeopleContainer/>
       </div>
     )
   }
