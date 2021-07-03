@@ -15,8 +15,9 @@ const Navigation = () => {
             <NavLink exact to="/people/new" style={link}>
                 New Person
             </NavLink>
-            
+            <br/><br/>
         </div>
+        
     )
 }
 
