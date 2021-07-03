@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import PeopleContainer from './containers/PeopleContainer'
+import Navigation from './components/Navigation'
 
 class App extends React.Component {
   
@@ -13,7 +14,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        Calorie Cruncher
+        <Navigation/>
         <br/>
         <br/>
         <PeopleContainer/>
