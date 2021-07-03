@@ -17,7 +17,7 @@ class Day < ApplicationRecord
 
     def calculate_tdee
         #Total Daily Energy Expenditure
-        self.tdee = self.bmr + self.tef + self.calories_expended
+        self.tdee = self.bmr + self.tef - self.calories_expended
     end
 
     def calculate_bmr
