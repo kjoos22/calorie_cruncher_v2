@@ -9,7 +9,6 @@ class DaysController < ApplicationController
 
     def create
         @day = @person.days.new(day_params)
-        @day.calories_expended = 0
         @day.set_variables()
         if @day.save
             render json: @person
