@@ -15,6 +15,7 @@ class PersonCreate extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.createPerson(this.state)
+        this.setState({name: "", inches: "", age: "", gender: ""})
     }
 
 
