@@ -37,9 +37,9 @@ class PersonCreate extends React.Component {
                         value={this.state.age} onChange={this.handleChange}/>
                     <br/>
                     <label>Gender: </label><br/>
-                    <select name="gender" value={this.state.gender} 
+                    <select name="gender" value={"DEFAULT"} 
                         onChange={this.handleChange}>
-                        <option value="" disabled selected>Select</option>
+                        <option value="DEFAULT" disabled>Select</option>
                         <option value="M">M</option>
                         <option value="F">F</option>
                     </select>
