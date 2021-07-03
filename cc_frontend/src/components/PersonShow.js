@@ -4,7 +4,8 @@ import DaysContainer from '../containers/DaysContainer'
 
 const Person = (props) => {
     
-    let person = props.people[props.match.params.id - 1]
+    let person = props.people.filter(person =>
+        person.id == props.match.params.id)[0]
     
     return (
         <div>
@@ -12,7 +13,7 @@ const Person = (props) => {
                 {person ? person.name : null} - {person ? person.age : null}
                 - {person ? person.gender : null}
             </h1>
-            <DaysContainer/>
+            <DaysContainer person={person}/>
         </div>
     )
 }
