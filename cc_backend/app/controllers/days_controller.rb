@@ -12,7 +12,7 @@ class DaysController < ApplicationController
         @day.calories_expended = 0
         @day.set_variables()
         if @day.save
-            render json: @day
+            render json: @person
         else 
             render josn: {error: "Error creating new day"}
         end
@@ -31,6 +31,7 @@ class DaysController < ApplicationController
 
     def day_params
         params.require(:day).permit(:person_id, :date, :pounds, :bmr, :tef,
-                                       :tdee, :calories_expended)
+                                        :tdee, :calories_expended,
+                                        :calories_consumed)
     end
 end

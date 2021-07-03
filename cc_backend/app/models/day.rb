@@ -22,8 +22,8 @@ class Day < ApplicationRecord
 
     def calculate_bmr
         #Basal Metabolic Rate
-        weight = self.weight * 0.453592
-        height = self.person.height * 2.54
+        weight = self.pounds * 0.453592
+        height = self.person.inches * 2.54
         age = self.person.age
         if self.person.gender == "M"
             self.bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5

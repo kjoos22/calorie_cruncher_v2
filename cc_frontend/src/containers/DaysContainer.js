@@ -7,7 +7,8 @@ class DaysContainer extends React.Component {
         return (
             <div>
                 DAYS CONTAINER TEST
-                <DayCreate/>
+                <DayCreate person={this.props.person}/>
+                <br/>
                 <Days days={this.props.person && this.props.person.days}/>
             </div>
         )
