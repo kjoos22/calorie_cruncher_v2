@@ -1,11 +1,13 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import SurplusOrDeficit from './SurplusOrDeficit'
+import DaySummary from './DaySummary'
+
 
 const Days = ({days}) => {
     return (
         <div>
             {days && days.map(d => 
-                <li key={d.id}><Link to={`/days/${d.id}`}>{d.date}</Link></li>
+                <li key={d.id}>{d.date}<DaySummary day={d}/></li>
             )}            
         </div>
     )

@@ -4,7 +4,7 @@ import {createDay} from '../actions/createDay'
 
 class DayCreate extends React.Component {
     
-    state = {date: "", pounds: "", calories_consumed: ""}    
+    state = {date: "", pounds: "", calories_consumed: "", calories_expended: ""}    
 
     handleChange = (e) => {
         this.setState({
@@ -15,7 +15,8 @@ class DayCreate extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault()
         this.props.createDay(this.state, this.props.person.id)
-        this.setState({date: "", pounds: "", calories_consumed: ""})
+        this.setState({date: "", pounds: "", calories_consumed: "",
+                        calories_expended: ""})
     }
 
     render() {
@@ -36,6 +37,12 @@ class DayCreate extends React.Component {
                     <input type='number' placeholder='Calories Consumed' 
                         name='calories_consumed' 
                         value={this.state.calories_consumed} 
+                        onChange={this.handleChange}/>
+                    <br/>
+                    <label>Calories Expended:</label><br/>
+                    <input type='number' placeholder='Calories Expended' 
+                        name='calories_expended' 
+                        value={this.state.calories_expended} 
                         onChange={this.handleChange}/>
                     <br/>
                     <input type="submit"/>
