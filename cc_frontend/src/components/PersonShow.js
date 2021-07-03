@@ -1,4 +1,5 @@
 import React from 'react'
+import {Redirect} from 'react-dom'
 
 const Person = (props) => {
     
@@ -6,7 +7,7 @@ const Person = (props) => {
     
     return (
         <li>
-           {person ? person.name : null} - {person ? person.age : null}
+            {person ? person.name : null} - {person ? person.age : null}
             - {person ? person.gender : null}
         </li>
     )
