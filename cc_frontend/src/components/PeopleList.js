@@ -1,6 +1,5 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
-import Person from './PersonShow'
+import {Link} from 'react-router-dom'
 
 //deconstructed props
 const PeopleList = ({people}) => {
