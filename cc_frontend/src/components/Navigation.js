@@ -5,7 +5,7 @@ const Navigation = () => {
     const link = {padding: '10px'}
 
     return(
-        <div>   
+        <div >   
             <NavLink exact to="/" style={link}>
                 Home
             </NavLink>
