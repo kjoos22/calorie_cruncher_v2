@@ -1,8 +1,10 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {createPerson} from '../actions/createPerson'
 
 class PersonCreate extends React.Component {
     
-    state = {name: "", height: "", age: "", gender: ""}
+    state = {name: "", inches: "", age: "", gender: ""}
     
     handleChange = (e) => {
         this.setState({
@@ -10,17 +12,23 @@ class PersonCreate extends React.Component {
         })
     }
 
+    handleSubmit = (e) => {
+        e.preventDefault()
+        this.props.createPerson(this.state)
+    }
+
+
     render() {
         return(
             <div>
                 Enter New Person
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <label>Name: </label><br/>                    
                     <input type='text' placeholder='Name' name="name"
                         value={this.state.name} onChange={this.handleChange}/>
                     <br/>
                     <label>Height (inches): </label><br/>
-                    <input type='number' placeholder='Height (inches)' name="height"
+                    <input type='number' placeholder='Height (inches)' name="inches"
                         value={this.state.height} onChange={this.handleChange}/>
                     <br/>
                     <label>Age: </label><br/>
@@ -34,10 +42,12 @@ class PersonCreate extends React.Component {
                         <option value="M">M</option>
                         <option value="F">F</option>
                     </select>
+                    <br/>
+                    <input type="submit"/>
                 </form>
             </div>
         )
     }
 }
 
-export default PersonCreate
+export default connect(null, {createPerson})(PersonCreate)

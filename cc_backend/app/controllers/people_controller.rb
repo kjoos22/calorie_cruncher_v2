@@ -10,7 +10,7 @@ class PeopleController < ApplicationController
         if @person.save
             render json: @person
         else 
-            render josn: {error: "Error creating new person"}
+            render json: {error: "Error creating new person"}
         end
     end
 
