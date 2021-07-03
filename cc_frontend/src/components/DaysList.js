@@ -7,7 +7,7 @@ const Days = ({days}) => {
     return (
         <div>
             {days && days.map(d => 
-                <li key={d.id}>{d.date}<DaySummary day={d}/></li>
+                <ul key={d.id}><h2>{d.date}</h2><DaySummary day={d}/></ul>
             )}            
         </div>
     )
