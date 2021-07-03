@@ -3,7 +3,7 @@ class Day < ApplicationRecord
     has_many :exercises
 
     validates :date, :pounds, :calories_consumed, 
-              :person_id, :calories_expended, presence: true
+              :person_id, :calories_expended, :calories_consumed, presence: true
     validates :pounds, numericality: {greater_than: 0}
     validates :calories_consumed, numericality: {only_integer: true,
                                                  greater_than: 0}
