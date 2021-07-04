@@ -15,6 +15,12 @@ To configure the database, navigate to the backend directory and run the followi
 rails db:migrate
 ```
 
+Limited seed data is provided, to implement run the following:
+
+```bash
+rails db:seed
+```
+
 ## Launching the program
 Once installed, navigate to the backend directory and launch the backend via:
 
